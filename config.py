@@ -4,7 +4,7 @@ class Config:
     # SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
     SECRET_KEY = os.environ.get('SECRET_KEY')
     UPLOADED_PHOTOS_DEST ='app/static/photos'
-    # QLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://wecode:New@localhost/pitches'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://wecode:New@localhost/pitches'
 
 class TestConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://wecode:New@localhost/pitches_test'
@@ -12,7 +12,7 @@ class TestConfig(Config):
 
 class ProdConfig(Config):
     # SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
-    QLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://wecode:New@localhost/pitches'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://wecode:New@localhost/pitches'
 
 class DevConfig(Config):
     DEBUG = True
