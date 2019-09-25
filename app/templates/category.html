@@ -17,6 +17,9 @@
         <h3 class="text-center" style="color:beige;">{{category.name|upper}}</h3>
         
         <hr>
+        <div class="container">
+            <a class="btn btn-warning text-center " style="float:left;" href="{{url_for('main.new_pitch',id=category.id)}}"> Post  Pitch</a>
+       </div> 
  
     </div> <br> <br> <br><br><br>
 
@@ -26,9 +29,7 @@
       <div class="col-sm-12 col-md-8" >
           {{ macro.displayPitches(pitches)}}
       </div>
-      <div class="container">
-            <a class="btn btn-warning text-center " style="float:left;" href="{{url_for('main.new_pitch',id=category.id)}}"> Post  Pitch</a>
-      </div> 
+     
     {%else%}
     
         <div class="well">
